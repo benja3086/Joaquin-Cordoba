@@ -1,3 +1,48 @@
-import { Link } from 'react-router-dom';
-const projects=[{tag:'QUINCE',title:'Una noche inolvidable',detail:'Fiesta de 15 · Highlight',image:'photo-1519741497674-611481863552',number:'01'},{tag:'CASAMIENTO',title:'Un sí para siempre',detail:'Boda · Resumen cinematográfico',image:'photo-1537633552985-df8429e8048b',number:'02'},{tag:'CUMPLEAÑOS',title:'Que siga la fiesta',detail:'Cumpleaños · Aftermovie',image:'photo-1514525253161-7a46d19cd819',number:'03'}];
-export default function Trabajos(){return <section className="subpage work"><div className="section-kicker">PORTFOLIO — UNA MUESTRA DE ESTILO</div><div className="work-head"><h1 className="subpage-title">Historias en<br/><em>movimiento.</em></h1><p>Algunos ejemplos del tipo de videos que puedo crear para tu evento.</p></div><div className="projects">{projects.map(x=><article className="project" key={x.number}><div className="project-image"><img src={`https://images.unsplash.com/${x.image}?auto=format&fit=crop&w=1000&q=85`} alt={`${x.tag.toLowerCase()} — ejemplo visual`}/><span className="demo-label">EJEMPLO DE ESTILO</span><Link className="project-play" to="/contacto" aria-label={`Consultar por video de ${x.tag.toLowerCase()}`}>↗</Link><span className="project-index">{x.number}</span></div><div className="project-info"><div><small>{x.tag}</small><h3>{x.title}</h3></div><span>{x.detail}</span></div></article>)}</div><p className="work-foot">Las imágenes son ilustrativas. Reemplazalas por trabajos reales cuando estén listos.</p></section>}
+import VideoCard from "../components/VideoCard.jsx";
+import { videos } from "../data/videos.js";
+export default function Trabajos() {
+  return (
+    <div className="scrapbook work-page">
+      <section className="work-cover">
+        <div className="section-kicker">PORTFOLIO · VIDEO EDITOR</div>
+        <h1>
+          MIS
+          <br />
+          <span>TRABAJOS</span>
+        </h1>
+        <p>
+          Cada video tiene su propio ritmo.
+          
+        </p>
+        <div className="paper-corner">
+          MONTAJE
+          <br />
+          SONIDO
+          <br />
+          COLOR
+          <br />✳
+        </div>
+        <span className="grid-stamp">JC / 2026</span>
+      </section>
+      <section className="gallery-board">
+        <div className="gallery-note">
+          <span className="tape" />
+          <b>ARCHIVO VISUAL</b>
+          <p>
+            Una mezcla de momentos, estilos y pequeñas historias. Dale play y
+            miralos con sonido.
+          </p>
+        </div>
+        <div className="video-gallery">
+          {videos.map((video, i) => (
+            <VideoCard key={video.number} video={video} index={i} />
+          ))}
+        </div>
+        <div className="gallery-end">
+          FIN DE LA SELECCIÓN <span>✳</span> ¿TENÉS UN PROYECTO?{" "}
+          <a href="/contacto">HABLEMOS ↗</a>
+        </div>
+      </section>
+    </div>
+  );
+}
