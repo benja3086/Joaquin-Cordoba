@@ -1,0 +1,4 @@
+import { Link } from 'react-router-dom';
+export default function Servicios() {
+  return <section className="subpage process"><div className="section-kicker">SERVICIOS — CÓMO TRABAJO</div><h1 className="subpage-title">Tu evento. Mi edición.<br/><em>Un recuerdo para siempre.</em></h1><p className="subpage-lead">Edición de video para fiestas de quince, casamientos, cumpleaños y celebraciones. Cada pieza se adapta al clima y a los momentos de tu evento.</p><div className="steps"><div><b>01</b><h3>Me contás</h3><p>La fecha, el tipo de evento y qué momentos querés guardar.</p></div><div><b>02</b><h3>Lo hacemos</h3><p>Recibo el material y le doy forma con ritmo, música y emoción.</p></div><div><b>03</b><h3>Lo revivís</h3><p>Te entrego un video listo para compartir y volver a disfrutar.</p></div></div><Link className="button button-light" to="/contacto">Consultar por mi evento <span>↗</span></Link></section>;
+}
