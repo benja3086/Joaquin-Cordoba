@@ -4,7 +4,7 @@ export default function Trabajos() {
   return (
     <div className="scrapbook work-page">
       <section className="work-cover">
-        <div className="section-kicker">PORTFOLIO · VIDEO EDITOR</div>
+        <div className="section-kicker">PORTFOLIO · EDITOR DE VIDEO</div>
         <h1>
           MIS
           <br />
@@ -29,8 +29,7 @@ export default function Trabajos() {
           <span className="tape" />
           <b>ARCHIVO VISUAL</b>
           <p>
-            Una mezcla de momentos, estilos y pequeñas historias. Dale play y
-            miralos con sonido.
+            Una mezcla de momentos, estilos y pequeñas historias. 
           </p>
         </div>
         <div className="video-gallery">

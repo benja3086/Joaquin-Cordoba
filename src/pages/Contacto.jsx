@@ -1,3 +1,68 @@
-import { videos } from '../data/videos.js';
-const phone='5493814170824', instagram='https://www.instagram.com/joaqu1nnnnn/';
-export default function Contacto(){return <div className="scrapbook inner-page contact-page"><section className="inner-cover contact-cover"><div className="section-kicker">CONTACTO — PRESUPUESTOS Y CONSULTAS</div><h1>HAGAMOS<br/><em>UN VIDEO.</em></h1><p>Contame qué estás festejando.<br/>Yo me encargo de convertirlo en recuerdo.</p><div className="id-card"><span className="tape"/>{videos[0]&&<video className="id-photo" src={videos[0].src} autoPlay muted loop playsInline preload="metadata" aria-label="Muestra del trabajo de Joaquín"/>}<div className="id-details"><small>NOMBRE</small><b>Joaquín Córdoba</b><small>OCUPACIÓN</small><b>Editor de video</b><small>RESIDE EN</small><b>Tucumán, Argentina</b></div><div className="id-band">VIDEO EDITOR · PORTFOLIO 2026</div></div><div className="contact-links"><a href={`https://wa.me/${phone}?text=${encodeURIComponent('Hola Joaquín, quiero consultar por un video para mi evento.')}`} target="_blank" rel="noreferrer">WHATSAPP <b>↗</b></a><a href={instagram} target="_blank" rel="noreferrer">INSTAGRAM <b>↗</b></a></div><a className="contact-handle" href={instagram} target="_blank" rel="noreferrer">@joaqu1nnnnn</a></section></div>}
+import { videos } from "../data/videos.js";
+const phone = "5493814170824",
+  instagram = "https://www.instagram.com/joaqu1nnnnn/";
+export default function Contacto() {
+  return (
+    <div className="scrapbook inner-page contact-page">
+      <section className="inner-cover contact-cover">
+        <div className="section-kicker">
+          CONTACTO — PRESUPUESTOS Y CONSULTAS
+        </div>
+        <h1>
+          HAGAMOS
+          <br />
+          <em>UN VIDEO.</em>
+        </h1>
+        <p>
+          Contame qué estás queriendo hacer.
+          <br />
+          Yo me encargo de convertirlo en hacerlo realidad.
+        </p>
+        <div className="id-card">
+          <span className="tape" />
+          {videos[0] && (
+            <video
+              className="id-photo"
+              src={videos[0].src}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              aria-label="Muestra del trabajo de Joaquín"
+            />
+          )}
+          <div className="id-details">
+            <small>NOMBRE</small>
+            <b>Joaquín Córdoba</b>
+            <small>OCUPACIÓN</small>
+            <b>Editor de video</b>
+            <small>RESIDE EN</small>
+            <b>Tucumán, Argentina</b>
+          </div>
+          <div className="id-band">EDITOR DE VIDEO · PORTFOLIO 2026</div>
+        </div>
+        <div className="contact-links">
+          <a
+            href={`https://wa.me/${phone}?text=${encodeURIComponent("Hola Joaquín, quiero consultar por un video para mi redes.")}`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            WHATSAPP <b>↗</b>
+          </a>
+          <a href={instagram} target="_blank" rel="noreferrer">
+            INSTAGRAM <b>↗</b>
+          </a>
+        </div>
+        <a
+          className="contact-handle"
+          href={instagram}
+          target="_blank"
+          rel="noreferrer"
+        >
+          @joaqu1nnnnn
+        </a>
+      </section>
+    </div>
+  );
+}
